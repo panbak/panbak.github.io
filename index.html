@@ -4,57 +4,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta description="Hi, I am Panagiotis Bakas and I'm a full stack developer.">
-    <title>Panagiotis Bakas - Full Stack Developer</title>
-    <link rel="icon" href="images/code-solid.svg" type="image/svg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <meta description="Hi, I am Panagiotis Bakas and I'm a software engineer.">
+    <title>Panagiotis Bakas - Software Engineer</title>
+    <link rel="icon" href="./images/favicon.svg" type="image/svg">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        input:checked~.dot {
+            transform: translateX(100%);
+            background-color: rgba(79, 70, 229, 1);
+        }
+    </style>
 </head>
 
-<body class="bg-gray-100 text-gray-900">
-    <nav class="fixed top-0 right-0 left-0 bg-blue-500 p-5 justify-around flex">
-        <a href="#"
-            class="font-bold text-gray-100 transition duration-300 ease-in-out hover:text-blue-500 hover:bg-gray-100 rounded px-3 py-1 md:text-xl"><i
-                class="fas fa-paper-plane"></i> Hire
-            me</a>
-        <a href="#"
-            class="font-bold text-gray-100 transition duration-300 ease-in-out hover:text-blue-500 hover:bg-gray-100 rounded px-3 py-1 md:text-xl"><i
-                class="fas fa-newspaper"></i> Blog</a>
+<body class="bg-gray-800" id="body">
+    <nav class="top-0 right-0 left-0 bg-indigo-600 p-3 shadow justify-around flex" id="nav">
+        <img src="./images/prof-pic.jpg" class="w-16 h-16 rounded-full border-2 border-white">
     </nav>
-    <main class="grid grid-cols-1 md:grid-cols-12">
-        <div class="md:col-span-5 mt-32 md:my-auto text-center">
-            <img class="inline object-cover w-24 h-24 mr-2 rounded-full" src="images/prof-pic.jpg"
-                alt="Profile image" />
-            <span class="text-3xl block mt-5">
-                Panagiotis Bakas
-            </span>
-            <span class="font-bold text-lg block mt-2">
-                Full Stack Developer
-            </span>
-            <div class="text-lg block mt-1">
-                <span class="block">🎓 Computer Science, BSc</span>
-                <span class="block">⚡ Enjoy developing applications</span>
-                <span class="block">🏠 Thiva, Greece</span>
+    <div class="flex items-center justify-center w-full mt-14">
+        <label for="toggle" class="flex items-center cursor-pointer">
+            <!-- toggle -->
+            <div class="relative">
+                <!-- input -->
+                <input id="toggle" type="checkbox" class="sr-only" checked />
+                <!-- line -->
+                <div class="w-10 h-4 bg-gray-400 rounded-full shadow-inner"></div>
+                <!-- dot -->
+                <div class="dot absolute w-6 h-6 bg-white rounded-full shadow -left-1 -top-1 transition"></div>
             </div>
+        </label>
+    </div>
+    <main class="mt-16">
+        <div class="grid grid-cols-12 w-11/12 sm:w-10/12 md:w-2/3 mx-auto text-gray-200 font-semibold text-lg mb-14"
+            id="about">
+            <span class="block mx-auto col-span-12 md:col-span-4 text-center">🎓 Computer Engineer, BSc</span>
+            <span class="block mx-auto col-span-12 md:col-span-4 text-center">⚡ Software Developer</span>
+            <span class="block mx-auto col-span-12 md:col-span-4 text-center">🏠 Thiva, Greece</span>
         </div>
-        <div class="md:col-span-7 col-span-1">
-            <div class="h-screen md:overflow-auto pt-5">
-                <div
-                    class="flex content-around overflow-hidden bg-white transition-shadow duration-500 shadow-lg hover:shadow-2xl rounded-2xl w-4/5 md:w-3/5 h-64 my-20 mx-auto">
-                    <img src="images/pokedex.jpg" class="object-cover">
-                </div>
-                <div
-                    class="bg-white transition-shadow duration-500 shadow-lg hover:shadow-2xl rounded-2xl w-4/5 md:w-3/5 h-64 my-20 mx-auto">
-                </div>
-                <div
-                    class="bg-white transition-shadow duration-500 shadow-lg hover:shadow-2xl rounded-2xl w-4/5 md:w-3/5 h-64 my-20 mx-auto">
-                </div>
-                <div
-                    class="bg-white transition-shadow duration-500 shadow-lg hover:shadow-2xl rounded-2xl w-4/5 md:w-3/5 h-64 my-20 mx-auto">
-                </div>
+        <div class="m-4">
+            <div
+                class="rounded bg-gray-900 flex justify-around p-4 w-11/12 sm:w-10/12 md:w-2/3 mx-auto font-semibold text-2xl mt-6 shadow">
+                <a href="https://www.github.com/panbak/" class="text-gray-300">
+                    <i class="fab fa-github text-2xl my-auto"></i>
+                    <span class="ml-2">Github</span>
+                </a>
+            </div>
+            <div
+                class="rounded bg-blue-800 flex justify-around p-4 w-11/12 sm:w-10/12 md:w-2/3 mx-auto font-semibold text-2xl mt-6 shadow">
+                <a href="https://www.linkedin.com/in/panbak/" class="text-gray-300">
+                    <i class="fab fa-linkedin-in text-2xl my-auto"></i>
+                    <span class="ml-2">Linkedin</span>
+                </a>
+            </div>
+            <div
+                class="rounded bg-pink-700 flex justify-around p-4 w-11/12 sm:w-10/12 md:w-2/3 mx-auto font-semibold text-2xl mt-6 shadow">
+                <a href="https://www.instagram.com/panbak_/" class="text-gray-300">
+                    <i class="fab fa-instagram text-2xl my-auto"></i>
+                    <span class="ml-2">Instagram</span>
+                </a>
+            </div>
+            <div
+                class="rounded bg-blue-700 flex justify-around p-4 w-11/12 sm:w-10/12 md:w-2/3 mx-auto font-semibold text-2xl mt-6 shadow">
+                <a href="https://www.facebook.com/panbak/" class="text-gray-300">
+                    <i class="fab fa-facebook text-2xl my-auto"></i>
+                    <span class="ml-2">Facebook</span>
+                </a>
             </div>
         </div>
     </main>
+    <script src="./js/toggleTheme.js"></script>
 </body>
 
 </html>
